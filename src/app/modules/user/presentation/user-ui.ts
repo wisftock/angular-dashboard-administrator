@@ -3,11 +3,11 @@ import { User } from '../domain/user.model';
 
 import { ButtonModule } from 'primeng/button';
 import { UserUseCase } from '../application/use-cases/user.use-case';
-import { UiButton } from '../../../ui';
+import { UIButton } from '../../../ui';
 
 @Component({
   selector: 'app-user-ui',
-  imports: [ButtonModule, UiButton],
+  imports: [ButtonModule, UIButton],
   templateUrl: './user-ui.html',
   styleUrl: './user-ui.css',
 })
