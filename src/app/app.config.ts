@@ -1,12 +1,27 @@
-import { ApplicationConfig, provideBrowserGlobalErrorListeners, provideZoneChangeDetection } from '@angular/core';
-import { provideRouter } from '@angular/router';
+import { ApplicationConfig, provideZoneChangeDetection } from '@angular/core';
+import { provideRouter, withDebugTracing } from '@angular/router';
 
 import { routes } from './app.routes';
+import { providePrimeNG } from 'primeng/config';
+import { MyPreset } from './mypreset';
+import { UserRepositoryPort } from './modules/user/domain/repository/user.respository';
+import { UserApiAdapter } from './modules/user/infrastructure/repository/user-api.repository';
 
 export const appConfig: ApplicationConfig = {
   providers: [
-    provideBrowserGlobalErrorListeners(),
     provideZoneChangeDetection({ eventCoalescing: true }),
-    provideRouter(routes)
-  ]
+    provideRouter(routes, withDebugTracing()),
+    {
+      provide: UserRepositoryPort,
+      useValue: UserApiAdapter,
+    },
+    providePrimeNG({
+      theme: {
+        preset: MyPreset,
+        options: {
+          darkModeSelector: false,
+        },
+      },
+    }),
+  ],
 };
