@@ -25,8 +25,8 @@ export class UIButton {
     const hover = this.disabled
       ? ''
       : this.primary
-        ? 'hover:bg-sky-600 border border-sky-500'
-        : 'hover:bg-gray-300 border border-gray-300';
+        ? 'hover:bg-sky-600 border hover:border-sky-600'
+        : 'hover:bg-gray-300 border hover:border-gray-300';
 
     return [base, hover, this.disabledClass, this.sizeClass];
   }
