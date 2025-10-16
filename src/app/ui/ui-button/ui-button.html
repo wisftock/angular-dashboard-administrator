@@ -1,13 +1,12 @@
 <button
-  class="px-4 py-3 rounded-sm font-medium transition-colors duration-200 flex items-center gap-2 m-5 cursor-pointer"
-  [ngClass]="{
-    'bg-sky-500 text-white hover:bg-sky-400': type === 'primary',
-    'bg-gray-200 text-gray-700 hover:bg-gray-300': type === 'secondary',
-    'bg-red-500 text-white hover:bg-red-600': type === 'danger',
-  }"
+  class="px-4 py-3 rounded-sm font-medium transition-colors duration-200 flex justify-center items-center cursor-pointer"
+  [ngClass]="classes"
+  (click)="onClick.emit($event)"
+  [disabled]="disabled"
+  [ngStyle]="{ 'background-color': backgroundColor }"
 >
   @if (icon) {
-    <i *ngIf="icon" class="pi" [ngClass]="icon"></i>
+    <i class="pi" [ngClass]="icon"></i>
   }
   {{ label }}
 </button>

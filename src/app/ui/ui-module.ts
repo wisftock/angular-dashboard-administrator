@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { UiButton } from './ui-button/ui-button';
+import { UIButton } from './ui-button/ui-button';
 
 @NgModule({
   declarations: [],
-  imports: [CommonModule, UiButton],
+  imports: [CommonModule, UIButton],
 })
-export class UiModule { }
+export class UIModule {}
