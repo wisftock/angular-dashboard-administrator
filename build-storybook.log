@@ -1,0 +1,14 @@
+
+> bases@0.0.0 build-storybook
+> ng run bases:build-storybook --output-dir=/tmp/chromatic--92213-ZyFUXn795S1m
+
+info => Cleaning outputDir: [36m../../../../../tmp/chromatic--92213-ZyFUXn795S1m[39m
+info => Loading presets
+info => Building manager..
+info => Building preview..
+info Addon-docs: using MDX3
+info => Using implicit CSS loaders
+info => Using angular browser target options from "bases:build"
+info => Using angular project with "tsConfig:/mnt/storage-files/frontend/angular/bases/.storybook/tsconfig.json"
+info => Using default Webpack5 setup
+info => Output directory: /tmp/chromatic--92213-ZyFUXn795S1m
